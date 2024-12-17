@@ -1,0 +1,232 @@
+
+<html >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portal</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7fb;
+            color: #333;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #004080;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 1.8rem;
+            border-bottom: 2px solid #003366;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        /* Welcome Section */
+        .welcome-section {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #004080;
+        }
+
+        .welcome-section p {
+            font-size: 1rem;
+            margin: 10px 0;
+            color: #555;
+        }
+
+        /* Navbar (Top Menu) */
+        nav {
+            display: flex;
+            justify-content: center;
+            padding: 15px 0;
+            background-color: #0059b3;
+        }
+
+        nav a {
+            color: white;
+            font-size: 1.1rem;
+            text-decoration: none;
+            margin: 0 20px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #ffcc00;
+            color: #003366;
+        }
+
+        /* Main Content Area */
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        /* Card Style for each feature */
+        .feature-card {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            width: 250px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .feature-card h2 {
+            font-size: 1.25rem;
+            margin-bottom: 15px;
+            color: #004080;
+        }
+
+        .feature-card p {
+            font-size: 1rem;
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+
+        .feature-card a {
+            display: inline-block;
+            padding: 12px 20px;
+            background-color: #004080;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .feature-card a:hover {
+            background-color: #003366;
+        }
+
+        /* Footer Section */
+        footer {
+            background-color: #004080;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.875rem;
+        }
+
+        /* Help Section */
+        .help-banner {
+            background-color: #003366;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .help-banner a {
+            color: #ffcc00;
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Welcome to Your Student Portal</h1>
+    </header>
+
+    <!-- Welcome Section -->
+    <div class="welcome-section">
+        <p>Welcome, [Student Name]!</p>
+        <p>Your academic journey starts here. Explore your courses, grades, certificates, and more.</p>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="courses.html">Courses</a>
+        <a href="profile.html">Profile</a>
+        <a href="log-in-page.html">Logout</a>
+    </nav>
+
+    <!-- Main Content Area -->
+    <div class="container">
+        <!-- Courses Card -->
+        <div class="feature-card">
+            <h2>Courses</h2>
+            <p>Explore available courses for the semester. Register or view your course details.</p>
+            <a href="courses.html">Go to Courses</a>
+        </div>
+
+        <!-- Certificates & Factures Card -->
+        <div class="feature-card">
+            <h2>Certificates & Factures</h2>
+            <p>Access your certificates, invoices, and financial details.</p>
+            <a href="certificates.html">View Documents</a>
+        </div>
+
+        <!-- Exams & Grades Card -->
+        <div class="feature-card">
+            <h2>Exams & Grades</h2>
+            <p>Check your exam schedules, grades, and academic performance.</p>
+            <a href="grades.html">View Results</a>
+        </div>
+
+        <!-- Campus Plan Card -->
+        <div class="feature-card">
+            <h2>Campus Plan</h2>
+            <p>Find your way around the campus with the interactive campus plan.</p>
+            <a href="campus-plan.html">View Map</a>
+        </div>
+
+        <!-- Today's Activities Card -->
+        <div class="feature-card">
+            <h2>Today's Activities</h2>
+            <p>Check out today's events, activities, and class schedules.</p>
+            <a href="activities.html">See Activities</a>
+        </div>
+
+        <!-- Settings Card -->
+        <div class="feature-card">
+            <h2>Settings</h2>
+            <p>Manage your account settings and preferences.</p>
+            <a href="settings.html">Edit Settings</a>
+        </div>
+    </div>
+
+    <!-- Help Banner -->
+    <div class="help-banner">
+        <p>Need some help? <br> Our assistance is <span style="color: #ffcc00;">there for you :)</span></p>
+        <a href="help.html">Contact Support</a>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Student Portal | All Rights Reserved</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,81 @@
+
+
+   
+  <style>
+    body {
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh; /* Ensures the body fills at least the screen height */
+    }
+  
+    .content {
+      flex: 12;
+      display: flex; 
+      flex-direction: column;
+      align-items: center; /* Horizontally center elements */
+    }
+  
+  
+    h1 {
+      text-align: center; /* Center the text */
+      font-family: Arial, sans-serif; /* Use Arial font */
+      font-size: 48px; /* Set the font size to make it bigger */
+    }
+  
+    label {
+      font-family: Arial, sans-serif; /* Use Arial font for labels */
+      font-size: 16px; /*Adjust label font size */
+      margin-bottom: 5px;
+    }
+  
+    .form-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 20px;
+      margin-bottom: 101px;
+      /* Styling for rectangular background */
+      background-color: #0a4b8cd2; 
+      padding: 20px; /* Space inside the rectangle */
+      width: 400px; /* fixed width */
+      height: 160px;
+    }
+  
+    .banner-container {
+      width: 100%; 
+      background-color: #004080; 
+    }
+  
+    .banner {
+      width: 100%; /* Ensures the image spans the full width */
+      height: auto; /* Maintains the image's aspect ratio */
+    }
+  
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+ 
+    <div class="content">
+      <h1>WELCOME BACK!</h1>
+  
+      <!-- Form Section -->
+      <div class="form-container">
+        <label for="email">Email:</label>
+        <input type="text" id="email" value.bind="email" placeholder="Enter your unifr email" />
+        <label for="password">Password:</label>
+        <input type="password" id="password" value.bind="password" placeholder="Enter your password" />
+        
+        <button click.trigger="login()">Log In</button>
+        <p id="errorMessage" if.bind="errorMessage">${errorMessage}</p>
+  
+      </div>
+    </div>
+  
+    <!-- Banner Section -->
+    <div class="banner-container">
+      <img class="banner" src="./src/pictures/bannerUnifrAp.png" alt="Banner" />
+    </div>

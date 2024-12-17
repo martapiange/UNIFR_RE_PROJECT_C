@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Courses</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        header {
+            background-color: #004080;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+        .course-card {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .course-card h2 {
+            color: #004080;
+            margin-bottom: 10px;
+        }
+        .course-card p {
+            line-height: 1.6;
+        }
+        .course-card ul {
+            padding-left: 20px;
+        }
+        .course-card ul li {
+            margin-bottom: 10px;
+        }
+        .register-btn, .unregister-btn {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-right: 10px;
+        }
+        .register-btn {
+            background-color: #28a745;
+        }
+        .register-btn:hover {
+            background-color: #218838;
+        }
+        .unregister-btn {
+            background-color: #dc3545;
+        }
+        .unregister-btn:hover {
+            background-color: #c82333;
+        }
+        .success-message {
+            color: green;
+            margin-top: 10px;
+            display: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Courses</h1>
+    </header>
+    <div class="container">
+        <!-- Course 1 -->
+        <div class="course-card">
+            <h2>Requirements Engineering for Information Systems [AS 2024]</h2>
+            <p>
+                The development of software, services, and IT infrastructure in an information system encompasses a wide range of methods and tools. This course covers the methods for determining requirements and choosing software tools.
+            </p>
+            <p><strong>Teacher:</strong> Fabian Muff</p>
+            <!-- Register and Unregister Buttons -->
+            <button class="register-btn" onclick="registerCourse(this)">Register</button>
+            <button class="unregister-btn" onclick="unregisterCourse(this)" style="display: none;">Unregister</button>
+            <p class="success-message">You have successfully registered for this course!</p>
+        </div>
+
+        <!-- Course 2 -->
+        <div class="course-card">
+            <h2>Advanced Data Analytics [AD 2024]</h2>
+            <p>
+                This course explores advanced data analytics techniques, including machine learning, big data tools, and ethical considerations in data handling.
+            </p>
+            <p><strong>Teacher:</strong> Dr. Jane Doe</p>
+            <!-- Register and Unregister Buttons -->
+            <button class="register-btn" onclick="registerCourse(this)">Register</button>
+            <button class="unregister-btn" onclick="unregisterCourse(this)" style="display: none;">Unregister</button>
+            <p class="success-message">You have successfully registered for this course!</p>
+        </div>
+    </div>
+
+    <script>
+        // Function to handle course registration
+        function registerCourse(button) {
+            const courseCard = button.parentElement; // Get the parent course card
+            const successMessage = courseCard.querySelector('.success-message'); // Success message
+            const unregisterBtn = courseCard.querySelector('.unregister-btn'); // Unregister button
+
+            // Show success message and unregister button
+            successMessage.style.display = 'block';
+            unregisterBtn.style.display = 'inline-block';
+
+            // Disable register button
+            button.disabled = true;
+            button.textContent = 'Registered';
+        }
+
+        // Function to handle course unregistration
+        function unregisterCourse(button) {
+            const courseCard = button.parentElement; // Get the parent course card
+            const successMessage = courseCard.querySelector('.success-message'); // Success message
+            const registerBtn = courseCard.querySelector('.register-btn'); // Register button
+
+            // Hide success message and unregister button
+            successMessage.style.display = 'none';
+            button.style.display = 'none';
+
+            // Enable register button
+            registerBtn.disabled = false;
+            registerBtn.textContent = 'Register';
+        }
+    </script>
+    <div style="margin: 20px;">
+        <button onclick="goBack()" style="
+            padding: 10px 20px; 
+            font-size: 16px; 
+            background-color: #004080; 
+            color: white; 
+            border: none; 
+            border-radius: 5px; 
+            cursor: pointer;">
+            ← Back
+        </button>
+    </div>
+    
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>
